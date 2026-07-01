@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucy Gaming Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.15/w3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell container-fluid">
+    <header class="topbar w3-card-4">
+      <div class="brand">
+        <div class="brand-mark">LGC</div>
+        <div>
+          <h1>Lucy Gaming Center</h1>
+          <p>Play. Pay. Win real cash prizes.</p>
+        </div>
+      </div>
+      <div class="topbar-actions btn-group">
+        <button id="themeToggle" class="button button-secondary btn">Neon mode</button>
+        <button id="logoutButton" class="button button-secondary btn hidden">Logout</button>
+      </div>
+    </header>
+
+    <main class="main-content" ng-app="techApp">
+      <section id="loginScreen" class="screen-grid">
+        <div class="hero-panel">
+          <div class="hero-badge">Gaming Center</div>
+          <h2>Power up your gaming experience.</h2>
+          <p>Login and deposit funds to play real competitive games. One platform, any device.</p>
+          <div class="hero-features">
+            <div>
+              <strong>Responsive UI</strong>
+              <span>Looks perfect on phones and desktops.</span>
+            </div>
+            <div>
+              <strong>Fast payments</strong>
+              <span>Simulated secure checkout for instant play.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-panel">
+          <div class="auth-tabs">
+            <button id="loginTab" class="tab active">Login</button>
+            <button id="registerTab" class="tab">Create account</button>
+          </div>
+
+          <form id="loginForm" class="auth-form">
+            <div class="form-group">
+              <label for="loginEmail">Email</label>
+              <input id="loginEmail" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input id="loginPassword" type="password" placeholder="••••••••" required />
+            </div>
+            <button type="submit" class="button button-primary">Login</button>
+          </form>
+
+          <form id="registerForm" class="auth-form hidden">
+            <div class="form-group">
+              <label for="registerName">Full Name</label>
+              <input id="registerName" type="text" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="registerEmail">Email</label>
+              <input id="registerEmail" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="registerPassword">Password</label>
+              <input id="registerPassword" type="password" placeholder="••••••••" required />
+            </div>
+            <button type="submit" class="button button-primary">Create account</button>
+          </form>
+
+          <div class="auth-footer">
+            <p>Join the best mobile-ready gaming center and start winning cash prizes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboardScreen" class="dashboard hidden">
+        <div class="dashboard-header">
+          <div>
+            <p class="eyebrow">Welcome back, <span id="welcomeName">Player</span></p>
+            <h2>Choose a game and start winning.</h2>
+          </div>
+          <div class="wallet-card">
+            <p>Wallet balance</p>
+            <strong id="walletAmount">$0.00</strong>
+            <div class="wallet-caps">
+              <span id="gamesPlayed">0 games played</span>
+              <span id="winRate">0% win rate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-layout">
+          <div class="card card-highlight">
+            <h3>Wallet actions</h3>
+            <p>Deposit, withdraw, and keep full control of your balance.</p>
+            <div class="bank-actions">
+              <form id="depositForm" class="payment-form">
+                <div class="form-row">
+                  <label for="depositAmount">Deposit amount</label>
+                  <input id="depositAmount" type="number" min="1" step="1" placeholder="50" required />
+                </div>
+                <div class="form-row">
+                  <label for="cardNumber">Card number</label>
+                  <input id="cardNumber" type="text" maxlength="19" placeholder="1234 5678 9012 3456" required />
+                </div>
+                <div class="form-row split">
+                  <div>
+                    <label for="expiryDate">Expiry</label>
+                    <input id="expiryDate" type="text" maxlength="5" placeholder="08/28" required />
+                  </div>
+                  <div>
+                    <label for="cvvCode">CVV</label>
+                    <input id="cvvCode" type="text" maxlength="3" placeholder="123" required />
+                  </div>
+                </div>
+                <button type="submit" class="button button-primary">Pay & add funds</button>
+                <p class="success-message hidden" id="depositSuccess">Deposit completed. Wallet updated.</p>
+              </form>
+
+              <button id="bonusButton" type="button" class="button button-accent">Claim daily bonus</button>
+              <p class="success-message hidden" id="bonusMessage">Bonus claimed! Extra credit added.</p>
+
+              <form id="withdrawForm" class="payment-form">
+                <div class="form-row">
+                  <label for="withdrawAmount">Withdraw amount</label>
+                  <input id="withdrawAmount" type="number" min="1" step="1" placeholder="20" required />
+                </div>
+                <button type="submit" class="button button-secondary">Withdraw funds</button>
+                <p class="success-message hidden" id="withdrawSuccess">Withdrawal completed. Funds removed from wallet.</p>
+              </form>
+            </div>
+          </div>
+
+          <div class="card card-games">
+            <div class="card-header">
+              <div>
+                <h3>Games to play</h3>
+                <p>Start with a low entry fee and compete to win bigger rewards.</p>
+              </div>
+            </div>
+            <div class="games-list" id="gamesList"></div>
+          </div>
+
+          <div class="card card-live">
+            <div class="card-header">
+              <div>
+                <h3>Live arena</h3>
+                <p>Watch live match action and enter the arena instantly.</p>
+              </div>
+            </div>
+            <div class="live-stats">
+              <div>
+                <span>Active players</span>
+                <strong id="livePlayers">28</strong>
+              </div>
+              <div>
+                <span>Current jackpot</span>
+                <strong id="liveJackpot">$520</strong>
+              </div>
+            </div>
+            <div class="live-feed" id="liveFeed">
+              <p class="live-item">Live feed initializing...</p>
+            </div>
+            <button id="enterLiveButton" class="button button-primary">Enter live match</button>
+          </div>
+
+          <div class="card card-stats">
+            <h3>Activity history</h3>
+            <ul class="activity-list stats-list" id="activityList">
+              <li>Loading wallet activity...</li>
+            </ul>
+          </div>
+
+          <div class="card card-winners">
+            <h3>Recent winners</h3>
+            <ul class="stats-list" id="recentWins">
+              <li>Loading recent wins...</li>
+            </ul>
+          </div>
+
+          <div class="card card-leaderboard">
+            <h3>Top players</h3>
+            <div class="leaderboard-list" id="leaderboardList"></div>
+          </div>
+
+          <div class="card card-info">
+            <h3>How it works</h3>
+            <ol>
+              <li>Login or create an account.</li>
+              <li>Deposit cash to your wallet.</li>
+              <li>Select a game and tap play.</li>
+              <li>Win real cash and withdraw anytime.</li>
+            </ol>
+          </div>
+
+          <div class="card card-stack" ng-controller="TechController as techCtrl">
+            <h3>Technology showcase</h3>
+            <p class="muted">This platform simulates a real gaming center using modern UI frameworks and backend technologies.</p>
+            <div class="tech-badges">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span><span>W3.CSS</span>
+              <span>React</span><span>AngularJS</span><span>jQuery</span><span>Node.js</span><span>Python</span>
+              <span>Django</span><span>SQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Java</span>
+            </div>
+            <div id="reactTech" class="react-card"></div>
+          </div>
+
+          <div class="card card-backend">
+            <h3>Backend simulation</h3>
+            <p class="muted">Live demo of server, database, and AI pipeline activity feeding this gaming center.</p>
+            <div class="backend-status-grid">
+              <div>
+                <span>Node.js API</span>
+                <strong id="apiStatus">Online</strong>
+              </div>
+              <div>
+                <span>PostgreSQL</span>
+                <strong id="dbStatus">Connected</strong>
+              </div>
+              <div>
+                <span>MongoDB</span>
+                <strong id="nosqlStatus">Ready</strong>
+              </div>
+            </div>
+            <div class="backend-log" id="backendLog">
+              <p>Initializing backend services...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="gameModal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close-button" id="closeModal">×</button>
+      <h3 id="modalGameTitle">Play Game</h3>
+      <p id="modalGameDescription">Spin to win cash prizes.</p>
+      <div class="game-controls">
+        <div class="form-row">
+          <label for="betAmount">Bet amount</label>
+          <input id="betAmount" type="number" min="1" step="1" placeholder="20" />
+        </div>
+        <button id="playGameButton" class="button button-primary">Play now</button>
+      </div>
+      <div class="game-result hidden" id="gameResultBox">
+        <p id="gameResultText"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
