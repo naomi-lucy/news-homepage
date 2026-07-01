@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Lucy Films</title>
+    <meta name="description" content="Get in touch with Lucy Films for your next film production project." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand">Lucy Films</a>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="work.html">Work</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container page-hero reveal">
+        <h1>Let’s create something unforgettable together.</h1>
+        <p>Share your idea, timeline, and goals and we’ll help shape a cinematic experience that feels true to your vision.</p>
+      </section>
+
+      <section class="container section contact-grid">
+        <div class="panel hero-panel contact-details reveal">
+          <h2>Start a conversation</h2>
+          <p>Email us to discuss your next film, campaign, or narrative project.</p>
+          <a href="mailto:hello@lucyfilms.com">hello@lucyfilms.com</a>
+          <p>Based in Los Angeles, available worldwide.</p>
+        </div>
+        <div class="panel hero-panel reveal">
+          <form>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" />
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com" />
+            <label for="message">Project details</label>
+            <textarea id="message" placeholder="Tell us about your vision"></textarea>
+            <button class="btn btn-primary" type="submit">Send inquiry</button>
+            <p data-form-status style="color: var(--accent); margin: 0;"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span data-year></span> Lucy Films. Crafted for stories worth seeing.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

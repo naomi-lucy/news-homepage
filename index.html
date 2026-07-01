@@ -1,77 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lucy Accessories and Wares</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucy Films | Cinematic Storytelling</title>
+    <meta name="description" content="Luxury film production with a cinematic eye for storytelling, branded content, and unforgettable visuals." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <div class="container header-inner">
-        <div class="logo">L.</div>
-        <nav class="nav">
-          <a href="#">Home</a>
-          <a href="#">Shop</a>
-          <a href="#">New Arrivals</a>
-          <a href="#">Best Sellers</a>
-          <a href="#">Contact</a>
+      <div class="container nav">
+        <a href="index.html" class="brand">Lucy Films</a>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="work.html">Work</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </header>
 
-    <main class="container">
-      <section class="top-grid">
-        <div class="left">
-          <div class="hero"></div>
-            <div class="hero-copy">
-              <h1 class="title">LUCY ACCESSORIES
-                <br>AND WARES</h1>
-              <div class="excerpt">
-                <p>Discover handmade jewelry, crafted home goods, and stylish accessories made for everyday life. Lucy Accessories and Wares brings thoughtful design and quality materials together in one beautiful collection.</p>
-              </div>
-            </div>
-            <a class="btn" href="#">Shop Now</a>
+    <main>
+      <section class="container hero-grid">
+        <div class="hero-panel reveal">
+          <p style="text-transform: uppercase; letter-spacing: 0.3em; color: var(--accent); font-size: 0.8rem; margin-bottom: 0.6rem;">Award-worthy film production</p>
+          <h1>Crafting cinematic stories with bold emotion and visual elegance.</h1>
+          <p>We create premium film experiences for brands, artists, and storytellers who want their work to feel unforgettable.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="contact.html">Book a consultation</a>
+            <a class="btn btn-secondary" href="work.html">Explore our work</a>
           </div>
         </div>
-        <aside class="right">
-          <div class="new-box">
-            <h3 class="new-title">Featured</h3>
-            <div class="new-item">
-              <h4>Handcrafted Necklaces</h4>
-              <p>Unique pieces made with care from sustainable materials.</p>
-            </div>
-            <hr>
-            <div class="new-item">
-              <h4>Eco-friendly Homeware</h4>
-              <p>Stylish kitchen and living accessories designed to last.</p>
-            </div>
-            <hr>
-            <div class="new-item">
-              <h4>Seasonal Gift Sets</h4>
-              <p>Perfect presents curated for every celebration.</p>
-            </div>
+        <div class="panel hero-visual reveal">
+          <div class="image-card">
+            <h3>Featured production</h3>
+            <p>Emotion-led visuals, cinematic pacing, and deliberate storytelling for brands and creatives.</p>
           </div>
-        </aside>
+        </div>
       </section>
 
-      <section class="features">
-        <article class="feature">
-          <div class="num">01</div>
-          <h5>Stylish Earrings</h5>
-          <p>Lightweight designs that add sparkle to any outfit.</p>
-        </article>
-        <article class="feature">
-          <div class="num">02</div>
-          <h5>Cozy Home Decor</h5>
-          <p>Soft throws, candles, and tableware for warm interiors.</p>
-        </article>
-        <article class="feature">
-          <div class="num">03</div>
-          <h5>Everyday Essentials</h5>
-          <p>Beautifully made accessories for daily use and gifting.</p>
-        </article>
+      <section class="container section">
+        <div class="section-head reveal">
+          <div>
+            <h2>Why clients choose us</h2>
+            <p>Story-first production built with attention to atmosphere, clarity, and craft.</p>
+          </div>
+        </div>
+        <div class="cards cards-3">
+          <article class="card">
+            <h3>Refined direction</h3>
+            <p>Creative concepts shaped to feel polished, memorable, and aligned with your vision.</p>
+          </article>
+          <article class="card">
+            <h3>Full production support</h3>
+            <p>From planning to final edit, every stage is handled with care and precision.</p>
+          </article>
+          <article class="card">
+            <h3>Premium finish</h3>
+            <p>The final work is cinematic, intentional, and built to leave a lasting impression.</p>
+          </article>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Lucy Films. Crafted for stories worth seeing.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
