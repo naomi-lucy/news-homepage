@@ -1,78 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucy Films | Cinematic Storytelling</title>
-    <meta name="description" content="Luxury film production with a cinematic eye for storytelling, branded content, and unforgettable visuals." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav">
-        <a href="index.html" class="brand">Lucy Films</a>
-        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-        <nav class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="work.html">Work</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucy&#39;s Programming Class</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="hero">
+            <div class="hero-copy">
+                <span class="badge">Lucy&#39;s Programming Class</span>
+                <h1>Register for an exciting programming journey.</h1>
+                <p>Join Lucy&#39;s next class and learn how to build real apps, solve problems, and create projects from day one.</p>
+                <div class="highlights">
+                    <article>
+                        <strong>Hands-on learning</strong>
+                        <p>Build fun exercises with step-by-step support.</p>
+                    </article>
+                    <article>
+                        <strong>Small groups</strong>
+                        <p>Get personal guidance and growing confidence.</p>
+                    </article>
+                    <article>
+                        <strong>Beginner-friendly</strong>
+                        <p>All skill levels are welcome; no experience required.</p>
+                    </article>
+                </div>
+            </div>
 
-    <main>
-      <section class="container hero-grid">
-        <div class="hero-panel reveal">
-          <p style="text-transform: uppercase; letter-spacing: 0.3em; color: var(--accent); font-size: 0.8rem; margin-bottom: 0.6rem;">Award-worthy film production</p>
-          <h1>Crafting cinematic stories with bold emotion and visual elegance.</h1>
-          <p>We create premium film experiences for brands, artists, and storytellers who want their work to feel unforgettable.</p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="contact.html">Book a consultation</a>
-            <a class="btn btn-secondary" href="work.html">Explore our work</a>
-          </div>
-        </div>
-        <div class="panel hero-visual reveal">
-          <div class="image-card">
-            <h3>Featured production</h3>
-            <p>Emotion-led visuals, cinematic pacing, and deliberate storytelling for brands and creatives.</p>
-          </div>
-        </div>
-      </section>
+            <form class="form-card" action="#" method="post">
+                <div class="form-header">
+                    <div>
+                        <span class="eyebrow">Secure your seat</span>
+                        <h2>Join Lucy&#39;s class</h2>
+                    </div>
+                    <span class="pill">Starts in 2 weeks</span>
+                </div>
 
-      <section class="container section">
-        <div class="section-head reveal">
-          <div>
-            <h2>Why clients choose us</h2>
-            <p>Story-first production built with attention to atmosphere, clarity, and craft.</p>
-          </div>
-        </div>
-        <div class="cards cards-3">
-          <article class="card">
-            <h3>Refined direction</h3>
-            <p>Creative concepts shaped to feel polished, memorable, and aligned with your vision.</p>
-          </article>
-          <article class="card">
-            <h3>Full production support</h3>
-            <p>From planning to final edit, every stage is handled with care and precision.</p>
-          </article>
-          <article class="card">
-            <h3>Premium finish</h3>
-            <p>The final work is cinematic, intentional, and built to leave a lasting impression.</p>
-          </article>
-        </div>
-      </section>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="full-name">Full name</label>
+                        <input type="text" id="full-name" name="full_name" placeholder="Emma Parker" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="field">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="10" max="100" placeholder="14" required>
+                    </div>
+                    <div class="field">
+                        <label for="skill-level">Skill level</label>
+                        <select id="skill-level" name="skill_level" required>
+                            <option value="">Select level</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="field field-full">
+                        <label for="school">School or program</label>
+                        <input type="text" id="school" name="school" placeholder="Greenwood High School">
+                    </div>
+                    <div class="field field-full">
+                        <label for="goals">Why do you want to join?</label>
+                        <textarea id="goals" name="goals" placeholder="I want to learn how to build websites and apps." rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <p class="note">All registrations are private and stored securely.</p>
+                    <button type="submit">Submit registration</button>
+                </div>
+            </form>
+        </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> Lucy Films. Crafted for stories worth seeing.</p>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>
